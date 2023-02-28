@@ -9,11 +9,26 @@ Color Palette
 body {
     color: #efe65c;
     font-family: 'Shantell Sans', cursive;
+    background-image: url(../Images/Coding\ Background.png);
+    background-size: cover;
+    background-position: top center;
+        text-align: center;
 }
 h1 {
-    color: #efe65c;
-    font-family: 'Parisienne', cursive;
+    color: #ffffff;
     font-size: 64px;
     line-height: 1.25;
-    font-weight: 400;
+    text-align: center;
+    font-family: 'Shantell Sans', cursive;
+}
+h2 {
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 1.25;
+    text-align: center;
+    font-family: 'Shantell Sans', cursive;
+}
+.header-item-1{
+    width: 100%;
+    text-align: center;
 }
