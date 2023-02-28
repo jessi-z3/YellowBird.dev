@@ -1,0 +1,19 @@
+/* 
+Color Palette
+#EFE65C Yellowbird Yellow
+#1F3466 Night Sky
+*/
+
+
+/* Global Styles */
+body {
+    color: #efe65c;
+    font-family: 'Shantell Sans', cursive;
+}
+h1 {
+    color: #efe65c;
+    font-family: 'Parisienne', cursive;
+    font-size: 64px;
+    line-height: 1.25;
+    font-weight: 400;
+}
