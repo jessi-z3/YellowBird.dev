@@ -32,3 +32,8 @@ h2 {
     width: 100%;
     text-align: center;
 }
+/* Responsive
+------------------------------------------- */
+@media screen and (min-width:480px) {
+   
+}
