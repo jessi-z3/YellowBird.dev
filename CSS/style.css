@@ -32,6 +32,14 @@ h2 {
     width: 100%;
     text-align: center;
 }
+
+/* Portfolio
+------------------------------------------- */
+.Portfolio {
+    background: #1F3466;
+}
+
+
 /* Responsive
 ------------------------------------------- */
 @media screen and (min-width:480px) {
