@@ -9,10 +9,7 @@ Color Palette
 body {
     color: #efe65c;
     font-family: 'Shantell Sans', cursive;
-    background-image: url(../Images/CodingBackground.png);
-    background-size: cover;
-    background-position: top center;
-        text-align: center;
+    text-align: center;
 }
 h1 {
     color: #ffffff;
@@ -30,6 +27,9 @@ h2 {
 }
 .header-item-1{
     width: 100%;
+    background-image: url(../Images/CodingBackground.png);
+    background-size: cover;
+    background-position: top center;
     text-align: center;
 }
 
