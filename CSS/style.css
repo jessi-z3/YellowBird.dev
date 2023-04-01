@@ -4,44 +4,129 @@ Color Palette
 #1F3466 Night Sky
 */
 
-
 /* Global Styles */
+main{
+    background-color: black;
+}
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 body {
-    color: #efe65c;
-    font-family: 'Shantell Sans', cursive;
-    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;    
+    font-size: 25px;
+    line-height: 1.5;
+}
+aside {
+    width: 50%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #EFE65C;
+    color: #EFE65C;
+}
+
+aside>img {
+    height: 330px;
+    margin: 0.5rem;
+}
+a {
+    color: #EFE65C;
+}
+
+a:hover {
+    text-decoration: none;
 }
 h1 {
     color: #ffffff;
     font-size: 64px;
     line-height: 1.25;
-    text-align: center;
-    font-family: 'Shantell Sans', cursive;
 }
 h2 {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.25;
-    text-align: center;
-    font-family: 'Shantell Sans', cursive;
+    margin: 0;
 }
-.header-item-1{
-    width: 100%;
-    background-image: url(../Images/CodingBackground.png);
-    background-size: cover;
-    background-position: top center;
-    text-align: center;
+h3 {
+    font-size: 32px;
 }
 
+h4 {
+    font-size: 28px;
+    font-style: italic;
+    line-height: normal;
+}
+
+p {
+    margin: 5px;
+}
+
+ul {
+    margin: 5px;
+}
+
+.divider>section {
+    border-bottom: 1px dashed #1E1A1D;
+    padding: 25px 0;
+}
+
+.divider>section:last-of-type {
+    border-bottom: none;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.header-item-1 img{
+    width: 300px;
+}
+.header-item-1{
+    overflow: hidden;
+    padding: 25px 0px;
+    
+}
+
+header {
+    color: #ffffff;
+    text-align: center;
+}
 /* Portfolio
 ------------------------------------------- */
 .Portfolio {
-    background: #1F3466;
+    background-image: url(https://github.com/jessi-z3/YellowBird.dev/blob/main/Images/ReactBlack.png);
+}
+/* Contact Info
+------------------------------------------- */
+footer {
+    color: #EFE65C;
+    text-align: center;
 }
 
+.contact-list {
+    color: #EFE65C;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-list a {
+    padding: 15px;
+    display: inline-inline-block;
+}
 
 /* Responsive
 ------------------------------------------- */
 @media screen and (min-width:480px) {
-   
+
 }
