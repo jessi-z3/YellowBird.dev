@@ -45,22 +45,21 @@ a:hover {
 }
 h1 {
     color: #ffffff;
-    font-size: 64px;
+    font-size: 38px;
     line-height: 1.25;
-    padding-bottom: 70px;
 }
 h2 {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 26px;
     line-height: 1.25;
     margin: 0;
     padding-top: 50px;
 }
 h3 {
-    font-size: 32px;
+    font-size: 18px;
 }
 h4 {
-    font-size: 28px;
+    font-size: 16px;
     font-style: italic;
     line-height: normal;
 }
@@ -81,12 +80,13 @@ ul {
     max-width: 800px;
     width: 85%;
     margin: 0 auto;
-    padding: 60px 0;
-}
-.header-wrap img {
-    width: 100%;
+    padding: 80px 0;
 }
 
+img.animated-gif {
+    width: 350px;
+    height: auto;
+}
 .header-item-1 img{
     width: 300px;
 }
@@ -97,8 +97,8 @@ ul {
 }
 .both-wrap{
     max-width: 800px;
-        width: 85%;
-        justify-content: center;
+    width: 85%;
+    justify-content: center;
 }
 .both-wrap h1{
     padding-bottom: 100px;
