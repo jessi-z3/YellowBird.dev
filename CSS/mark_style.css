@@ -1,0 +1,17 @@
+/* 
+Color Palette
+#EFE65C Yellowbird Yellow
+#1F3466 Night Sky
+*/
+
+/* Global Styles */
+main {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+html {
+    box-sizing: border-box;
+}
