@@ -19,5 +19,9 @@
   "homepage": "https://github.com/jessi-z3/YellowBird.dev#readme",
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "@react-native/metro-config": "^0.72.11",
+    "react-native": "^0.72.4"
   }
 }
