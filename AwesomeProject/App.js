@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
     height: Dimensions.get("window").height * 1.25,
+    justifyContent: "center",
   },
   yellowText: {
     color: "#EFE65C",
@@ -108,18 +109,17 @@ const styles = StyleSheet.create({
   },
   headshot: {
     resizeMode: "contain",
-    width: Dimensions.get("window").width / 2.15,
-    alignContent: "flex-end",
+    width: 300,
+    alignSelf: "center",
+    marginBottom: 55,
   },
   introText: {
-    alignContent: "flex-start",
-    padding: 5,
+    alignSelf: "center",
+    padding: 15,
   },
   introContainer: {
-    flexWrap: "nowrap",
     flexDirection: "row",
-    alignItems: "center",
+    alignSelf: "center",
     flex: 3,
-    paddingBottom: 35,
   },
 });
