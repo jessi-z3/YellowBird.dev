@@ -88,11 +88,11 @@ const styles = StyleSheet.create({
     color: "#EFE65C",
   },
   h1: {
-    fontSize: 24,
+    fontSize: 26,
     fontFamily: "Pacifico_400Regular",
   },
   h2: {
-    fontSize: 18,
+    fontSize: 20,
     fontFamily: "Pacifico_400Regular",
     color: "white",
   },
@@ -100,16 +100,18 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito_400Regular",
     fontSize: 20,
     color: "white",
+    paddingHorizontal: 15,
   },
   h3: {
     fontFamily: "Nunito_700Bold",
     fontSize: 20,
     color: "white",
     fontWeight: "bold",
+    paddingHorizontal: 15,
   },
   headshot: {
     resizeMode: "contain",
-    width: 300,
+    width: Dimensions.get("window").width / 2.5,
     alignSelf: "center",
     marginBottom: 55,
   },
