@@ -24,6 +24,16 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+  let food = [
+    "../Images/IMG_0007.jpeg",
+    "../Images/IMG_0032.jpeg",
+    "../Images/IMG_0269.jpeg",
+    "../Images/IMG_0470.jpeg",
+    "../Images/IMG_1550.jpeg",
+    "../Images/IMG_1770.jpeg",
+    "../Images/IMG_1812.jpeg",
+    "../Images/IMG_2258.jpeg",
+  ];
   const width = Dimensions.get("window").width;
   return (
     <ScrollView>
