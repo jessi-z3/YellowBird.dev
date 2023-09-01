@@ -25,14 +25,14 @@ export default function App() {
     return null;
   }
   let food = [
-    "../Images/IMG_0007.jpeg",
-    "../Images/IMG_0032.jpeg",
-    "../Images/IMG_0269.jpeg",
-    "../Images/IMG_0470.jpeg",
-    "../Images/IMG_1550.jpeg",
-    "../Images/IMG_1770.jpeg",
-    "../Images/IMG_1812.jpeg",
-    "../Images/IMG_2258.jpeg",
+    { Image: require("./Images/IMG_0007.jpeg") },
+    { Image: require("./Images/IMG_0032.jpeg") },
+    { Image: require("./Images/IMG_0269.jpeg") },
+    { Image: require("./Images/IMG_0470.jpeg") },
+    { Image: require("./Images/IMG_1550.jpeg") },
+    { Image: require("./Images/IMG_1770.jpeg") },
+    { Image: require("./Images/IMG_1812.jpeg") },
+    { Image: require("./Images/IMG_2258.jpeg") },
   ];
   const width = Dimensions.get("window").width;
   return (
@@ -59,13 +59,13 @@ export default function App() {
         You’ll have a constant cheerleader, a talented team-player, and
         sometimes sweets…
       </Text>
-      <View style={{ backgroundColor: "white", margin: 15}}>
+      <View style={{ margin: 15}}>
         <Carousel
           loop
           width={width}
           height={width / 2}
           autoPlay={true}
-          data={[...new Array(6).keys()]}
+          data={food}
           scrollAnimationDuration={3000}
           // onSnapToItem={(index) => console.log("current index:", index)}
           renderItem={({ index }) => (
@@ -76,7 +76,8 @@ export default function App() {
                 justifyContent: "center",
               }}
             >
-              <Text style={{ textAlign: "center", fontSize: 30 }}>{index}</Text>
+              <Image source = {food[index].Image} style={{alignSelf: "center", height: width/2, resizeMode: "contain"}} />
+              {/* <Text style={{ textAlign: "center", fontSize: 30 }}>{index}</Text> */}
             </View>
           )}
         />
