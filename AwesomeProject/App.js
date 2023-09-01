@@ -9,7 +9,7 @@ import {
 
 import Carousel from "react-native-reanimated-carousel";
 
-
+import Contact from './Contact';
 import * as React from "react";
 
 import { StatusBar } from 'expo-status-bar';
@@ -67,7 +67,6 @@ export default function App() {
           autoPlay={true}
           data={food}
           scrollAnimationDuration={3000}
-          // onSnapToItem={(index) => console.log("current index:", index)}
           renderItem={({ index }) => (
             <View
               style={{
@@ -82,6 +81,7 @@ export default function App() {
           )}
         />
       </View>
+      <Contact></Contact>
       <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -92,7 +92,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
-    height: Dimensions.get("window").height * 1.25,
+    height: Dimensions.get("window").height * 2,
     justifyContent: "center",
   },
   yellowText: {
@@ -133,6 +133,6 @@ const styles = StyleSheet.create({
   introContainer: {
     flexDirection: "row",
     alignSelf: "center",
-    flex: 3,
+    flex: 1,
   },
 });
