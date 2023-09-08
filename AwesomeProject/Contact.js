@@ -1,11 +1,11 @@
+import { Pacifico_400Regular } from "@expo-google-fonts/pacifico";
+import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
+
 import React from "react";
 
-import { StyleSheet, Text, TextInput, View, Dimensions, Pressable } from "react-native";
+import { StyleSheet, Text, TextInput, Image, View, Dimensions, Pressable } from "react-native";
 
 import { useFonts } from "expo-font";
-import { Pacifico_400Regular } from "@expo-google-fonts/pacifico";
-
-import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
 
 export  default function Contact(){
     const [name, onChangeName] = React.useState("John Doe");
@@ -16,6 +16,7 @@ export  default function Contact(){
   let [fontsLoaded] = useFonts({
     Pacifico_400Regular,
     Nunito_400Regular,
+    Nunito_700Bold,
   });
   if (!fontsLoaded) {
     return null;
@@ -25,6 +26,26 @@ export  default function Contact(){
   return (
     <View style={styles.container}>
       <Text style={[styles.h1, styles.yellowText]}>Keep in Touch</Text>
+      <View style={styles.iconRow}>
+        <Pressable onPress={() => {}}>
+          <Image
+            source={require("./Images/icons8-facebook-64.png")}
+            style={styles.icon}
+          />
+        </Pressable>
+        <Pressable onPress={() => {}}>
+          <Image
+            source={require("./Images/icons8-linkedin-64.png")}
+            style={styles.icon}
+          />
+        </Pressable>
+        <Pressable onPress={() => {}}>
+          <Image
+            source={require("./Images/icons8-twitterx-50.png")}
+            style={styles.icon}
+          />
+        </Pressable>
+      </View>
       <View style={styles.row}>
         <Text style={styles.h2}>Name:</Text>
         <TextInput
@@ -75,7 +96,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    margin: 25,
+    margin: 35,
   },
   yellowText: {
     color: "#EFE65C",
@@ -115,5 +136,16 @@ const styles = StyleSheet.create({
     width: 250,
     height: 35,
     alignContent: "flex-end",
+  },
+  icon: {
+    resizeMode: "contain",
+    width: 50,
+    height: 50,
+  },
+  iconRow: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: Dimensions.get("window").width - 20,
+    marginTop: 15,
   },
 });
