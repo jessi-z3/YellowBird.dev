@@ -12,7 +12,7 @@ import * as React from "react";
 
 import { StatusBar } from 'expo-status-bar';
 
-import { StyleSheet, Text, View, Image, Dimensions, ScrollView, FlatList} from 'react-native';
+import { StyleSheet, Text, View, Image, Dimensions, ScrollView, Platform} from 'react-native';
 
 import Contact from './Contact';
 
@@ -35,14 +35,18 @@ export default function App() {
     { Image: require("./Images/IMG_1812.jpeg") },
     { Image: require("./Images/IMG_2258.jpeg") },
   ];
+  
   const width = Dimensions.get("window").width;
+  
   return (
     <ScrollView>
       <View style={styles.container}>
+        {/* Logo Image */}
         <Image
-          style={{ alignSelf: "center" }}
+          style={{ alignSelf: "center", flex: 0.5, resizeMode: "contain", width: Dimensions.get("window").width }}
           source={require("./Images/black_yellowbird.gif")}
         />
+        {/* Name and Title with Photo */}
         <View style={styles.introContainer}>
           <Text style={styles.introText}>
             <Text style={[styles.yellowText, styles.h1]}>
@@ -55,16 +59,18 @@ export default function App() {
             source={require("./Images/green_blouse.jpeg")}
           />
         </View>
+        {/* Bio */}
         <Text style={styles.h3}>What's it like to work with me?</Text>
         <Text style={styles.paragraph}>
           You’ll have a constant cheerleader, a talented team-player, and
           sometimes sweets…
         </Text>
-        <View style={{ margin: 15 }}>
+        {/* Pics of Sweets */}
+        <View style={{ margin: 15, flex: 1 }}>
           <Carousel
             loop
             width={width}
-            height={Dimensions.get("window").height / 2.5}
+            height={Dimensions.get("window").height / 2}
             autoPlay={true}
             data={food}
             scrollAnimationDuration={3000}
@@ -80,14 +86,16 @@ export default function App() {
                   source={food[index].Image}
                   style={{
                     alignSelf: "center",
-                    height: Dimensions.get("window").height / 2.5,
+                    height: Dimensions.get("window").height / 2,
                     resizeMode: "contain",
+                    width: width,
                   }}
                 />
               </View>
             )}
           />
         </View>
+        {/* Bio Continued */}
         <Text style={styles.paragraph}>We can always talk Star Wars,</Text>
         <Image style={styles.pic1} source={require("./Images/IMG_0958.jpeg")} />
         <Text style={styles.paragraph}>
@@ -95,24 +103,15 @@ export default function App() {
         </Text>
         <Image style={styles.pic2} source={require("./Images/IMG_3772.jpg")} />
         <Text style={styles.h3}>My Passions:</Text>
-        <View style={{flex: .25}}>
-          <FlatList
-            data={[
-              { key: "Volunteering" },
-              { key: "Coding" },
-              { key: "Inclusion" },
-            ]}
-            renderItem={({ item }) => {
-              return (
-                <View>
-                  <Text style={styles.paragraph}>
-                    {"\u2022"} {item.key}
-                  </Text>
-                </View>
-              );
-            }}
-          />
+        <View style={{ flex: 0.25 }}>
+          <Text style={styles.paragraph}>
+            {"\u2022"} Volunteering{"\n"}
+            {"\u2022"} Inclusion{"\n"}
+            {"\u2022"} Baking{"\n"}
+            {"\u2022"} Coding{"\n"}
+          </Text>
         </View>
+        {/* Contact Form */}
         <Contact></Contact>
         <StatusBar style="auto" />
       </View>
@@ -144,14 +143,14 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito_400Regular",
     fontSize: 20,
     color: "white",
-    paddingHorizontal: 15,
+    paddingHorizontal: Platform.OS == "web" ? 35 : 15,
   },
   h3: {
     fontFamily: "Nunito_700Bold",
     fontSize: 20,
     color: "white",
     fontWeight: "bold",
-    paddingHorizontal: 15,
+    paddingHorizontal: Platform.OS == "web" ? 35 : 15,
     marginTop: 15,
   },
   headshot: {
@@ -159,6 +158,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width / 2.5,
     alignSelf: "center",
     marginBottom: 55,
+    height: Dimensions.get("window").height / 2,
   },
   pic1: {
     resizeMode: "contain",
@@ -172,9 +172,10 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width / 1.75,
     alignSelf: "center",
     paddingVertical: 15,
-    flex: .75,
+    flex: 0.75,
   },
   introText: {
+    textAlign: "center",
     alignSelf: "center",
     padding: 15,
   },
