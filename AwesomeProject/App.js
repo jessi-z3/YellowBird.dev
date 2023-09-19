@@ -1,20 +1,47 @@
-import {
-  Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
+import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
 import { Pacifico_400Regular } from "@expo-google-fonts/pacifico";
 
+import { Component } from "react";
+
+import { TouchableOpacity, Alert } from "react-native";
+
 import {
-  useFonts,}
-  from 'expo-font';
+  Container,
+  Header,
+  Title,
+  Content,
+  Text,
+  Icon,
+  Card,
+  CardItem,
+  Item,
+  Body,
+  Right,
+  Button,
+  Input,
+  Form,
+  Textarea,
+  Left,
+} from "native-base";
+
+import { useFonts } from "expo-font";
 
 import Carousel from "react-native-reanimated-carousel";
 
 import * as React from "react";
 
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
 
-import { StyleSheet, Text, View, Image, Dimensions, ScrollView, Platform} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Image,
+  Dimensions,
+  ScrollView,
+  Platform,
+} from "react-native";
 
-import Contact from './Contact';
+import Contact from "./Contact";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -35,15 +62,21 @@ export default function App() {
     { Image: require("./Images/IMG_1812.jpeg") },
     { Image: require("./Images/IMG_2258.jpeg") },
   ];
-  
+
   const width = Dimensions.get("window").width;
+
   
   return (
     <ScrollView>
       <View style={styles.container}>
         {/* Logo Image */}
         <Image
-          style={{ alignSelf: "center", flex: 0.5, resizeMode: "contain", width: Dimensions.get("window").width }}
+          style={{
+            alignSelf: "center",
+            flex: 0.5,
+            resizeMode: "contain",
+            width: Dimensions.get("window").width,
+          }}
           source={require("./Images/black_yellowbird.gif")}
         />
         {/* Name and Title with Photo */}
@@ -118,7 +151,6 @@ export default function App() {
     </ScrollView>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
