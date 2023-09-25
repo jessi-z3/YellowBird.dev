@@ -1,11 +1,19 @@
 {"data": 
     {"pledges":
-        [{
-            "name": "Jessi Z.",
-            "city": "Piggott",
-            "age": "32",
-            "date": "2023-09-18T19:17:00.511Z"
-        }]
+        [
+            {
+                "name": "Jessi Z.",
+                "city": "Piggott",
+                "age": 32,
+                "date": 20230918,
+            },
+            {
+                "name": "Dylan C.",
+                "city": "Piggott",
+                "age": 16,
+                "date": 20230925,
+            },
+    ]
 
     }
 }
