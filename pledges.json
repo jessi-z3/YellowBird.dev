@@ -1,15 +1,12 @@
-{"data": 
-    [
-        {
-            "name": "Jessi Z.",
-            "city": "Piggott",
-            "age": 32
-        },
-        {
-            "name": "Dylan C.",
-            "city": "Piggott",
-            "age": 16
-        }
-    ]
-
-}
+[
+    {
+        "name": "Jessi Z.",
+        "city": "Piggott",
+        "age": 32
+    },
+    {
+        "name": "Dylan C.",
+        "city": "Piggott",
+        "age": 16
+    }
+]
