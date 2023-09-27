@@ -4,16 +4,14 @@
             {
                 "name": "Jessi Z.",
                 "city": "Piggott",
-                "age": 32,
-                "date": 20230918,
+                "age": 32
             },
             {
                 "name": "Dylan C.",
                 "city": "Piggott",
-                "age": 16,
-                "date": 20230925,
-            },
-    ]
+                "age": 16
+            }
+        ]
 
     }
 }
