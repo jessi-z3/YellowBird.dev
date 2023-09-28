@@ -1,4 +1,5 @@
-    [
+{
+    "pledges": [
         {
             "name": "Jessi Z.",
             "city": "Piggott",
@@ -10,4 +11,4 @@
             "age": 16
         }
     ]
-
+}
