@@ -10,5 +10,11 @@
             "city": "Piggott",
             "age": 16
         }
+    ],
+    "users": [
+        {
+            "username": "reeseapp",
+            "password": "pledgepost"
+        }
     ]
 }
