@@ -1,32 +1,39 @@
 {
-  "name": "yellowbird.dev",
+  "name": "awesomeproject",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jessi-z3/YellowBird.dev.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jessi-z3/YellowBird.dev/issues"
-  },
-  "homepage": "https://github.com/jessi-z3/YellowBird.dev#readme",
-  "devDependencies": {
-    "jest": "^29.5.0",
-    "json-server": "^0.17.3",
-    "json-server-auth": "^2.1.0"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
   },
   "dependencies": {
-    "@react-native/metro-config": "^0.72.11",
+    "@expo-google-fonts/nunito": "^0.2.3",
+    "@expo-google-fonts/pacifico": "^0.2.3",
+    "@expo/webpack-config": "^19.0.0",
+    "@react-email/render": "^0.0.7",
     "body-parser": "^1.20.2",
+    "expo": "~49.0.8",
+    "expo-font": "^11.4.0",
+    "expo-status-bar": "~1.6.0",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "react-native": "^0.72.4"
-  }
+    "firebase": "^10.3.1",
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5",
+    "native-base": "^3.4.28",
+    "nodemailer": "^6.9.5",
+    "normalize-css-color": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.72.4",
+    "react-native-gesture-handler": "^2.12.1",
+    "react-native-reanimated": "~3.3.0",
+    "react-native-reanimated-carousel": "^3.5.1",
+    "react-native-web": "~0.19.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
 }
