@@ -3,54 +3,26 @@ import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
 
 import { useFonts } from "expo-font";
 
+import * as React from "react";
 
+import {
+  StyleSheet,
+  View,
+  Image,
+  Dimensions,
+  Platform,
+  Text,
+  TextInput, 
+  Linking,
+  Pressable
+} from "react-native";
 
 
 export  default function Contact(){
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  // const firebaseConfig = {
-  //   apiKey: "AIzaSyD5rSfYy6Qalq9wp6kzDeVlq-koh7DGRwU",
-  //   authDomain: "contact-form-db-d9943.firebaseapp.com",
-  //   databaseURL: "https://contact-form-db-d9943-default-rtdb.firebaseio.com",
-  //   projectId: "contact-form-db-d9943",
-  //   storageBucket: "contact-form-db-d9943.appspot.com",
-  //   messagingSenderId: "442636953000",
-  //   appId: "1:442636953000:web:07807e9b6a4ac66eb9299d",
-  //   measurementId: "G-XBB31X91TE",
-  // };
-
-  // Initialize Firebase
-  // const app = initializeApp(firebaseConfig);
-  // const analytics = getAnalytics(app);
-
   const [name, onChangeName] = React.useState("John Doe");
   const [email, onChangeEmail] = React.useState("example@email.com");
   const [phone, onChangePhone] = React.useState("555-555-5555");
   const [message, onChangeMessage] = React.useState("Message");
-
-  // const postContact = async () => {
-  //   const requestOptions = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ name: {name}, email: {email}, phone: {phone}, message: {message} }),
-  //   };
-    // try {
-    //   const response = await fetch(
-    //     "https://contact-form-db-d9943-default-rtdb.firebaseio.com/contacts.json",
-    //     requestOptions
-    //   ).then((response) => {
-    //     response.json().then((data) => {
-    //       Alert.alert("Message sent at : ", data.createdAt);
-    //     });
-    //   })
-    // } catch (error) {
-    //   console.error(error);
-    // }
-  // }
 
   let [fontsLoaded] = useFonts({
     Pacifico_400Regular,

@@ -1,29 +1,6 @@
 import { Nunito_400Regular, Nunito_700Bold } from "@expo-google-fonts/nunito";
 import { Pacifico_400Regular } from "@expo-google-fonts/pacifico";
 
-import { Component } from "react";
-
-import { TouchableOpacity, Alert } from "react-native";
-
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Text,
-  Icon,
-  Card,
-  CardItem,
-  Item,
-  Body,
-  Right,
-  Button,
-  Input,
-  Form,
-  Textarea,
-  Left,
-} from "native-base";
-
 import { useFonts } from "expo-font";
 
 import Carousel from "react-native-reanimated-carousel";
@@ -39,6 +16,7 @@ import {
   Dimensions,
   ScrollView,
   Platform,
+  Text
 } from "react-native";
 
 import Contact from "./Contact";
