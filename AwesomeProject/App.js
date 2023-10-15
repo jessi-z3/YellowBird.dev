@@ -51,7 +51,6 @@ export default function App() {
         <Image
           style={{
             alignSelf: "center",
-            flex: 0.5,
             resizeMode: "contain",
             width: Dimensions.get("window").width,
           }}
@@ -71,59 +70,68 @@ export default function App() {
           />
         </View>
         {/* Bio */}
-        <Text style={styles.h3}>What's it like to work with me?</Text>
-        <Text style={styles.paragraph}>
-          You’ll have a constant cheerleader, a talented team-player, and
-          sometimes sweets…
-        </Text>
-        {/* Pics of Sweets */}
-        <View style={{ margin: 15, flex: 1 }}>
-          <Carousel
-            loop
-            width={width}
-            height={Dimensions.get("window").height / 2}
-            autoPlay={true}
-            data={food}
-            scrollAnimationDuration={3000}
-            renderItem={({ index }) => (
-              <View
-                style={{
-                  flex: 1,
-                  borderWidth: 1,
-                  justifyContent: "center",
-                }}
-              >
-                <Image
-                  source={food[index].Image}
-                  style={{
-                    alignSelf: "center",
-                    height: Dimensions.get("window").height / 2,
-                    resizeMode: "contain",
-                    width: width,
-                  }}
-                />
-              </View>
-            )}
-          />
-        </View>
-        {/* Bio Continued */}
-        <Text style={styles.paragraph}>We can always talk Star Wars,</Text>
-        <Image style={styles.pic1} source={require("./Images/IMG_0958.jpeg")} />
-        <Text style={styles.paragraph}>
-          and if you like amazingly adorable cat pictures, I have them.
-        </Text>
-        <Image style={styles.pic2} source={require("./Images/IMG_3772.jpg")} />
-        <Text style={styles.h3}>My Passions:</Text>
-        <View style={{ flex: 0.25 }}>
+        <View style={styles.bioContainer}>
+          <Text style={styles.h3}>What's it like to work with me?</Text>
           <Text style={styles.paragraph}>
-            {"\u2022"} Volunteering{"\n"}
-            {"\u2022"} Inclusion{"\n"}
-            {"\u2022"} Baking{"\n"}
-            {"\u2022"} Coding{"\n"}
+            You’ll have a constant cheerleader, a talented team-player, and
+            sometimes sweets…
           </Text>
+          {/* Pics of Sweets */}
+          <View>
+            <Carousel
+              loop
+              width={width}
+              height={Dimensions.get("window").height / 2}
+              autoPlay={true}
+              data={food}
+              scrollAnimationDuration={3000}
+              renderItem={({ index }) => (
+                <View
+                  style={{
+                    flex: 1,
+                    borderWidth: 1,
+                    justifyContent: "center",
+                  }}
+                >
+                  <Image
+                    source={food[index].Image}
+                    style={{
+                      alignSelf: "center",
+                      height: Dimensions.get("window").height / 2,
+                      resizeMode: "contain",
+                      width: width,
+                      paddingHorizontal: 15,
+                    }}
+                  />
+                </View>
+              )}
+            />
+          </View>
+          {/* Bio Continued */}
+          <Text style={styles.paragraph}>We can always talk Star Wars,</Text>
+          <Image
+            style={styles.pic1}
+            source={require("./Images/IMG_0958.jpeg")}
+          />
+          <Text style={styles.paragraph}>
+            and if you like amazingly adorable cat pictures, I have them.
+          </Text>
+          <Image
+            style={styles.pic2}
+            source={require("./Images/IMG_3772.jpg")}
+          />
+          <Text style={styles.h3}>My Passions:</Text>
+          <View>
+            <Text style={styles.paragraph}>
+              {"\u2022"} Volunteering{"\n"}
+              {"\u2022"} Inclusion{"\n"}
+              {"\u2022"} Baking{"\n"}
+              {"\u2022"} Coding{"\n"}
+            </Text>
+          </View>
+          {/* Contact Form */}
+          <Contact></Contact>
         </View>
-        {/* Contact Form */}
-        <Contact></Contact>
         <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -133,8 +141,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
-    height: 3000,
     justifyContent: "center",
+    flex: 2,
   },
   yellowText: {
     color: "#EFE65C",
@@ -153,7 +161,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito_400Regular",
     fontSize: 20,
     color: "white",
-    paddingHorizontal: Platform.OS == "web" ? 35 : 15,
+    marginHorizontal: Platform.OS == "web" ? 35 : 15,
   },
   h3: {
     fontFamily: "Nunito_700Bold",
@@ -167,22 +175,19 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     width: Dimensions.get("window").width / 2.5,
     alignSelf: "center",
-    marginBottom: 55,
+    marginBottom: 25,
     height: Dimensions.get("window").height / 2,
+    flex: 1,
   },
   pic1: {
     resizeMode: "contain",
-    width: Dimensions.get("window").width / 1.75,
+    width: Platform.OS == "web" ? 300 : Dimensions.get("window").width / 1.75,
     alignSelf: "center",
-    paddingVertical: 15,
-    flex: 1,
   },
   pic2: {
     resizeMode: "contain",
-    width: Dimensions.get("window").width / 1.75,
+    width: Platform.OS == "web" ? 300 : Dimensions.get("window").width / 1.75,
     alignSelf: "center",
-    paddingVertical: 15,
-    flex: 0.75,
   },
   introText: {
     textAlign: "center",
@@ -193,5 +198,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "center",
     flex: 1,
+  },
+  bioContainer: {
+    flexDirection: "column",
+    backgroundColor: "black",
   },
 });

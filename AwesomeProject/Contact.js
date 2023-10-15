@@ -124,9 +124,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     width: Dimensions.get("window").width,
+    backgroundColor: "black",
   },
   innerContainer: {
-    margin: 35,
+    padding: 35,
+    backgroundColor: "black",
   },
   yellowText: {
     color: "#EFE65C",
@@ -168,8 +170,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width / 1.5,
     height: 35,
     alignContent: "flex-end",
-    marginHorizontal:   Platform.OS == "web" ? 35 : 0,
-
+    marginHorizontal: Platform.OS == "web" ? 35 : 0,
   },
   icon: {
     resizeMode: "contain",
