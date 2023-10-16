@@ -204,3 +204,20 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
   },
 });
+
+const express = require("express");
+const app = express();
+const port = 80; // Define the port your server will listen on
+
+app.use(express.json()); // Enable JSON request body parsing
+
+app.post("https://yellowbird.dev/pledge.json", (req, res) => {
+  // Handle POST requests here
+  console.log("Received POST request with data:", req.body);
+  // You can process the data and send a response here
+  res.json({ message: "Data received successfully" });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
