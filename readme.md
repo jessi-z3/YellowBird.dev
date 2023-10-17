@@ -5,4 +5,4 @@
 
 ### Thank you for checking out my website's code.
 
-I'm working on updating this to give it a fresher look and add some features. Currently the live website is HTML and CSS. The in progress website is React Native, and it should be up in the coming week.
+Currently the website is React Native. I usually update this website monthly. I'm happy to answer any questions about it or any of my other projects.
