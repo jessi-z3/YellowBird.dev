@@ -19,6 +19,7 @@
     "expo-status-bar": "~1.6.0",
     "express": "^4.18.2",
     "firebase": "^10.3.1",
+    "http": "^0.0.1-security",
     "imap": "^0.8.19",
     "mailparser": "^3.6.5",
     "native-base": "^3.4.28",

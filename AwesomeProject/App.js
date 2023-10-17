@@ -113,13 +113,15 @@ export default function App() {
             style={styles.pic1}
             source={require("./Images/IMG_0958.jpeg")}
           />
-          <Text style={styles.paragraph}>
-            and if you like amazingly adorable cat pictures, I have them.
-          </Text>
-          <Image
-            style={styles.pic2}
-            source={require("./Images/IMG_3772.jpg")}
-          />
+          <View>
+            <Text style={styles.paragraph}>
+              and if you like amazingly adorable cat pictures, I have them.
+            </Text>
+            <Image
+              style={styles.pic2}
+              source={require("./Images/IMG_3772.jpg")}
+            />
+          </View>
           <Text style={styles.h3}>My Passions:</Text>
           <View>
             <Text style={styles.paragraph}>
@@ -183,11 +185,13 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     width: Platform.OS == "web" ? 300 : Dimensions.get("window").width / 1.75,
     alignSelf: "center",
+    height: Dimensions.get("window").height / 2,
   },
   pic2: {
     resizeMode: "contain",
     width: Platform.OS == "web" ? 300 : Dimensions.get("window").width / 1.75,
     alignSelf: "center",
+    height: Dimensions.get("window").height / 2,
   },
   introText: {
     textAlign: "center",
@@ -203,21 +207,4 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "black",
   },
-});
-
-const express = require("express");
-const app = express();
-const port = 80; // Define the port your server will listen on
-
-app.use(express.json()); // Enable JSON request body parsing
-
-app.post("https://yellowbird.dev/pledge.json", (req, res) => {
-  // Handle POST requests here
-  console.log("Received POST request with data:", req.body);
-  // You can process the data and send a response here
-  res.json({ message: "Data received successfully" });
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
 });
