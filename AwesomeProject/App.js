@@ -5,8 +5,6 @@ import { useFonts } from "expo-font";
 
 import Carousel from "react-native-reanimated-carousel";
 
-import * as React from "react";
-
 import { StatusBar } from "expo-status-bar";
 
 import {
@@ -18,6 +16,8 @@ import {
   Platform,
   Text
 } from "react-native";
+
+import * as React from 'react';
 
 import Contact from "./Contact";
 
@@ -42,7 +42,6 @@ export default function App() {
   ];
 
   const width = Dimensions.get("window").width;
-
   
   return (
     <ScrollView>
