@@ -110,7 +110,9 @@ export  default function Contact(){
           ></TextInput>
         </View>
         <View style={{ padding: 10, alignSelf: "flex-end" }}>
-          <Pressable style={[]} onPress={() => {}}>
+          <Pressable style={[]} onPress={() => {Linking.openURL(
+            "mailto:jessi@yellowbird.dev?subject=Message%20from%20" + name + "&body=" + phone + "%0A" + email + "%0A" + message
+          );}}>
             <Text style={[styles.h2, styles.yellowText]}>Submit</Text>
           </Pressable>
         </View>

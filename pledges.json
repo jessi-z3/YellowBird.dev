@@ -1,20 +1,15 @@
-{
-    "pledges": [
-        {
-            "name": "Jessi Z.",
-            "city": "Piggott",
-            "age": 33
-        },
-        {
-            "name": "Dylan C.",
-            "city": "Piggott",
-            "age": 16
-        }
-    ],
-    "users": [
-        {
-            "username": "reeseapp",
-            "password": "pledgepost"
-        }
-    ]
+{"data":
+    {"pledges": [
+            {
+                "name": "Jessi Z.",
+                "city": "Piggott",
+                "age": 33
+            },
+            {
+                "name": "Dylan C.",
+                "city": "Piggott",
+                "age": 16
+            }
+        ]
+    }
 }
